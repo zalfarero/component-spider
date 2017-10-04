@@ -6,10 +6,10 @@ var config = (function(window,document,undefined){
   var config = {};
 
   // Set starting point for crawl
-  config.startUrl = 'http://google.com';
+  config.startUrl = 'http://www.google.com';
 
   // words to require for all urls ** put your top domain here to keep it local **
-  config.requiredValues = 'google.com';
+  config.requiredValues = 'www.google.com';
 
   // add any words that spider should skip (comma or space separated)
   config.skippedValues = 'facebook twitter instagram youtube';
@@ -33,7 +33,7 @@ var config = (function(window,document,undefined){
   config.loadPlugins = false;
 
   // set limit for links logged (Enter 0 for unlimited.)
-  config.limit = 0;
+  config.limit = 3;
 
   // override userAgent if necessary
   config.userAgent = null;

@@ -126,11 +126,11 @@
                 }
                 // Log url
                 //        
-                //      if(status >= 400) {
-                //          this.echo("* " + this.colorizer.format(status, helpers.statusColor(status)) + ' ' + url);
-                //      } else {
-                //          this.echo("  " + this.colorizer.format(status, helpers.statusColor(status)) + ' ' + url);
-                //      }
+                      if(status >= 400) {
+                          this.echo("* " + this.colorizer.format(status, helpers.statusColor(status)) + ' ' + url);
+                      } else {
+                          this.echo("  " + this.colorizer.format(status, helpers.statusColor(status)) + ' ' + url);
+                      }
 
 
                 var itemUrl = url;
@@ -186,13 +186,14 @@
                     var links = [];
 
                     __utils__.findAll('a[href]').forEach(function (e) {
-                        function strEndsWith(str, suffix) {
-                    return str.match(suffix + "$") == suffix;
-                }
-                        var test = e.getAttribute('href');
-                        if (strEndsWith(test, '.html')) {
-                            links.push(test);
-                        }
+//                        function strEndsWith(str, suffix) {
+//                    return str.match(suffix + "$") == suffix;
+//                }
+                        links.push(e.getAttribute('href'));
+//                        var test = e.getAttribute('href');
+//                        if (strEndsWith(test, '.html')) {
+//                            links.push(test);
+//                        }
                         //                    this.log(test);
                         //                    test.each(function (item) {
                         //                        this.log(item);
@@ -308,10 +309,10 @@ casper.on('error', function (msg, backtrace) {
 
 // Find the longuest request
 casper.on('resource.requested', function (resource) {
-    //        times[resource.id] = {
-    //            start: new Date().getTime(),
-    //            url: resource.url
-    //        };
+            times[resource.id] = {
+                start: new Date().getTime(),
+                url: resource.url
+            };
 });
 casper.on('resource.received', function (resource) {
     if (resource.stage == 'end') {
