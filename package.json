@@ -1,18 +1,18 @@
 {
-  "name": "casperjs-spider",
-  "version": "0.6.2",
+  "name": "component-spider",
+  "version": "0.0.1",
   "description": "Use CasperJS to crawl sites and report issues.",
   "main": "config.js",
   "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/seethroughtrees/casperjs-spider.git"
+    "url": "git://github.com/zalfarero/component-spider"
   },
-  "author": "seethroughtrees",
+  "author": "zalfarero",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/seethroughtrees/casperjs-spider/issues"
+    "url": "https://github.com/zalfarero/component-spider/issues"
   },
-  "homepage": "https://github.com/seethroughtrees/casperjs-spider"
+  "homepage": "https://github.com/zalfarero/component-spider"
 }
